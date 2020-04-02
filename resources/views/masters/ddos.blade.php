@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('page_title')
-    Deductions
+    DDO
 @endsection
 @section('content')
     <!-- Content Wrapper. Contains page content -->
@@ -84,11 +84,11 @@
                         </div>
                         <div class="form-group">
                             <label for="dept_code" class="col-sm-4 control-label">Department Code</label>
-                            <div class="col-sm-12">
+                            <div class="col-sm-12 deptm">
                                 <select class="form-control select2" id="dept_code" name="dept_code">
                                     <option value=""> -- SELECT -- </option>
                                     @foreach($dept as $dpt)
-                                        <option value="{{ $dpt->dept_code }}">{{ $dpt->dept_name }}</option>
+                                        <option id="{{ $dpt->dept_code }}" value="{{ $dpt->dept_code }}">{{ $dpt->dept_name }}</option>
                                     @endforeach
                                 </select>
                             </div>
@@ -145,14 +145,14 @@
     <script>
         $(function () {
             var str = "";
+            var code = "";
+            var name = "";
             $.ajaxSetup({
                 headers: {
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                 }
             });
-            $('.select2').select2({
-                theme: 'bootstrap4'
-            })
+
             var table = $('.tbl-data').DataTable({
                 processing: true,
                 serverSide: true,
@@ -191,6 +191,10 @@
                     $('#ddo_name').val(data.ddo_name);
                     $('#treasury_code').val(data.treasury_code);
                     $('#bank_code').val(data.bank_code);
+                    //code = data.dept_code;
+                    //$('div.deptm select').val(data.dept_code);
+                    $('.id_100 option[value=' + data.dept_code + ']').attr('selected','selected');
+                    //name = data.dept_name;
                 })
             });
 
@@ -234,6 +238,9 @@
                     }
                 });
             });
+            $('.select2').select2({
+                theme: 'bootstrap4'
+            })
         });
     </script>
 @endsection

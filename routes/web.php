@@ -33,6 +33,14 @@ Route::delete('admin/departments/delete/{id}', [
     'uses' => 'MastersController@dept_destroy',
     'as' => 'department.destroy'
 ]);
+Route::get('admin/departments/get', [
+    'uses' => 'MastersController@getDepts',
+    'as' => 'getDepts'
+]);
+Route::get('admin/departments/get/{id}', [
+    'uses' => 'MastersController@getDept',
+    'as' => 'getDept'
+]);
 Route::get('admin/treasuries', [
     'uses' => 'MastersController@treasury_index',
     'as' => 'treasuries'
@@ -125,6 +133,10 @@ Route::get('admin/designations/{id}/edit', [
     'uses' => 'MastersController@desgn_edit',
     'as' => 'designation.edit'
 ]);
+Route::match(['put', 'patch'],'/admin/designations/update/{id}', [
+    'uses' => 'MastersController@desgn_update',
+    'as' => 'desgn.update'
+]);
 Route::delete('admin/designations/delete/{id}', [
     'uses' => 'MastersController@desgn_destroy',
     'as' => 'designation.destroy'
@@ -141,7 +153,17 @@ Route::get('admin/ddos/{id}/edit', [
     'uses' => 'MastersController@ddo_edit',
     'as' => 'ddo.edit'
 ]);
+//Route::post('admin/ddos/update/{id}', [
+//    'uses' => 'MastersController@ddo_update',
+//    'as' => 'ddo.update'
+//]);
+Route::match(['put', 'patch'],'/admin/ddos/update/{id}', [
+    'uses' => 'MastersController@ddo_update',
+    'as' => 'ddo.update'
+]);
 Route::delete('admin/ddos/delete/{id}', [
     'uses' => 'MastersController@ddo_destroy',
     'as' => 'ddo.destroy'
 ]);
+
+

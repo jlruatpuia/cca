@@ -95,7 +95,7 @@
                             <label for="pay_level" class="col-sm-4 control-label">Pay Level</label>
                             <div class="col-sm-12">
                                 <input type="number" class="form-control" id="pay_level" name="pay_level"
-                                       placeholder="Pay Level" required />
+                                       placeholder="Pay Level" />
                             </div>
                         </div>
 
@@ -132,7 +132,7 @@
             });
             $('.select2').select2({
                 theme: 'bootstrap4'
-            })
+            });
             var table = $('.tbl-data').DataTable({
                 processing: true,
                 serverSide: true,

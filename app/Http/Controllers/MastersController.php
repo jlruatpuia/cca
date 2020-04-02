@@ -15,6 +15,7 @@ use Redirect;
 use Response;
 use Yajra\DataTables\DataTables;
 use DB;
+use Session;
 
 class MastersController extends Controller
 {
@@ -52,6 +53,16 @@ class MastersController extends Controller
 
     public function dept_destroy($id){
         $dept = Department::where('id',$id)->delete();
+        return Response::json($dept);
+    }
+
+    public function getDepts(){
+        return Response::json(Department::all());
+        exit;
+    }
+
+    public function getDept($id){
+        $dept = Department::where('dept_code', $id)->get();
         return Response::json($dept);
     }
 
@@ -269,7 +280,8 @@ class MastersController extends Controller
                 ->addIndexColumn()
                 ->addColumn('action', function($data) {
                     $btn = '<div class="btn-group">';
-                    $btn = $btn.'<a href="javascript:void(0);" data-toggle="tooltip" title="Edit" class="btn btn-sm btn-info edit"  data-id="' . $data->id . '"><i class="fas fa-edit"></i></a>';
+//                    $btn = $btn.'<a href="javascript:void(0);" data-toggle="tooltip" title="Edit" class="btn btn-sm btn-info edit"  data-id="' . $data->id . '"><i class="fas fa-edit"></i></a>';
+                    $btn = $btn.'<a href="' . route('designation.edit', $data->id) . '" data-toggle="tooltip" title="Edit" class="btn btn-sm btn-info edit"  ><i class="fas fa-edit"></i></a>';
                     $btn = $btn.'<a href="javascript:void(0);" data-toggle="tooltip" title="Delete" class="btn btn-sm btn-danger delete" data-id="' . $data->id .'"><i class="fas fa-trash"></i></a>';
                     $btn = $btn.'</div>';
                     return $btn;
@@ -295,8 +307,29 @@ class MastersController extends Controller
     }
 
     public function desgn_edit($id){
+//        $desgn = Designation::find($id);
+//        return Response::json($desgn);
+        $dept = Department::all();
         $desgn = Designation::find($id);
-        return Response::json($desgn);
+        return view('masters.desgn-edit')
+            -> with ('dept', $dept)
+            -> with ('desgn', $desgn);
+    }
+
+    public function desgn_update(Request $request, $id){
+        $this->validate($request, [
+            'dept_code' => 'required',
+            'desgn_code' => 'required',
+            'desgn_name' => 'required'
+            ]);
+        $desgn = Designation::find($id);
+        $desgn->dept_code = $request->dept_code;
+        $desgn->desgn_code = $request->desgn_code;
+        $desgn->desgn_name = $request->desgn_name;
+        $desgn->pay_level = $request->pay_level;
+        $desgn->save();
+        Session::flash('success', 'Designation updated successfully');
+        return redirect('admin/designations');
     }
 
     public function desgn_destroy($id){
@@ -311,7 +344,8 @@ class MastersController extends Controller
                 ->addIndexColumn()
                 ->addColumn('action', function($data) {
                     $btn = '<div class="btn-group">';
-                    $btn = $btn.'<a href="javascript:void(0);" data-toggle="tooltip" title="Edit" class="btn btn-sm btn-info edit"  data-id="' . $data->id . '"><i class="fas fa-edit"></i></a>';
+//                    $btn = $btn.'<a href="javascript:void(0);" data-toggle="tooltip" title="Edit" class="btn btn-sm btn-info edit"  data-id="' . $data->id . '"><i class="fas fa-edit"></i></a>';
+                    $btn = $btn.'<a href="' . route('ddo.edit', $data->id) . '" data-toggle="tooltip" title="Edit" class="btn btn-sm btn-info edit"><i class="fas fa-edit"></i></a>';
                     $btn = $btn.'<a href="javascript:void(0);" data-toggle="tooltip" title="Delete" class="btn btn-sm btn-danger delete" data-id="' . $data->id .'"><i class="fas fa-trash"></i></a>';
                     $btn = $btn.'</div>';
                     return $btn;
@@ -347,8 +381,36 @@ class MastersController extends Controller
     }
 
     public function ddo_edit($id){
+//        $ddo = DDO::find($id);
+//        return Response::json($ddo);
+        $depts = Department::all();
+        $tries = Treasury::all();
         $ddo = DDO::find($id);
-        return Response::json($ddo);
+
+        //dd($ddo);
+        return view('masters.ddos-edit')
+            -> with ('dept', $depts)
+            -> with ('tries', $tries)
+            -> with ('ddo', $ddo);
+    }
+
+    public function ddo_update(Request $request, $id){
+        //dd($request->all());
+        $this->validate($request, [
+            'ddo_code' => 'required',
+            'ddo_desc' => 'required',
+            'treasury_code' => 'required'
+        ]);
+        $ddo = DDO::find($id);
+        $ddo->ddo_code = $request->ddo_code;
+        $ddo->ddo_desc = $request->ddo_desc;
+        $ddo->dept_code = $request->dept_code;
+        $ddo->ddo_name = $request->ddo_name;
+        $ddo->treasury_code = $request->treasury_code;
+        $ddo->bank_code = $request->bank_code;
+        $ddo->save();
+        Session::flash('success', 'DDO Detail updated successfully');
+        return redirect('admin/ddos');
     }
 
     public function ddo_destroy($id){

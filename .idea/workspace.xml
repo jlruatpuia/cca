@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="43561e0a-7fe6-4aef-a071-8c109dea6512" name="Default Changelist" comment="" />
+    <list default="true" id="43561e0a-7fe6-4aef-a071-8c109dea6512" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/masters/ddos-edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/masters/desgn-edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MastersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MastersController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/includes/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/masters/ddos.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/masters/ddos.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/masters/designations.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/masters/designations.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -182,7 +191,8 @@
       <workItem from="1585574328264" duration="3980000" />
       <workItem from="1585662501842" duration="785000" />
       <workItem from="1585753871062" duration="68000" />
-      <workItem from="1585754103769" duration="2151000" />
+      <workItem from="1585754103769" duration="3350000" />
+      <workItem from="1585839468351" duration="8506000" />
     </task>
     <servers />
   </component>
@@ -194,6 +204,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="22" key="#Notifications/0.0.1366.728@0.0.1366.728" timestamp="1585756195719" />
+    <state x="308" y="0" key="CommitChangelistDialog2" timestamp="1585849287757">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="308" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1585849287757" />
     <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1585756225411">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -206,29 +220,29 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="447" y="69" key="Github.UntrackedFilesDialog/0.0.1366.728@0.0.1366.728" timestamp="1585756486564" />
-    <state x="645" y="297" key="NewPhpFileDialog" timestamp="1585575117345">
+    <state x="645" y="297" key="NewPhpFileDialog" timestamp="1585848206584">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="645" y="297" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1585575117345" />
+    <state x="645" y="297" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1585848206584" />
     <state x="184" y="6" key="SettingsEditor" timestamp="1585756134438">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="6" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1585756134438" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1585756077443">
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1585757092957">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1585756077443" />
-    <state x="492" y="281" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585756147253">
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1585757092957" />
+    <state x="492" y="281" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585757072890">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="492" y="281" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1585756147253" />
+    <state x="492" y="281" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1585757072890" />
     <state x="339" y="162" key="run.anything.popup" timestamp="1585577672245">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1585577672245" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1585577680414">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1585847051442">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1585577680414" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1585847051442" />
   </component>
 </project>
