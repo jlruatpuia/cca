@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="43561e0a-7fe6-4aef-a071-8c109dea6512" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/masters/ddos-edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/masters/desgn-edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MastersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MastersController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/includes/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/masters/ddos.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/masters/ddos.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/masters/designations.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/masters/designations.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -192,22 +186,40 @@
       <workItem from="1585662501842" duration="785000" />
       <workItem from="1585753871062" duration="68000" />
       <workItem from="1585754103769" duration="3350000" />
-      <workItem from="1585839468351" duration="8506000" />
+      <workItem from="1585839468351" duration="9021000" />
+      <workItem from="1586057620485" duration="28000" />
+      <workItem from="1586064355838" duration="3145000" />
     </task>
+    <task id="LOCAL-00001" summary="edit ddo &amp; edit desgn added">
+      <created>1585849334228</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1585849334228</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="edit ddo &amp; edit desgn added" />
+    <option name="LAST_COMMIT_MESSAGE" value="edit ddo &amp; edit desgn added" />
   </component>
   <component name="WindowStateProjectService">
     <state x="275" y="22" key="#Notifications" timestamp="1585756195719">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="22" key="#Notifications/0.0.1366.728@0.0.1366.728" timestamp="1585756195719" />
-    <state x="308" y="0" key="CommitChangelistDialog2" timestamp="1585849287757">
+    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1586065521277">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="308" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1585849287757" />
+    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1586065521277" />
+    <state x="308" y="0" key="CommitChangelistDialog2" timestamp="1585849330742">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="308" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1585849330742" />
     <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1585756225411">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
